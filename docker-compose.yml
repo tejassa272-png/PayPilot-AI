@@ -17,6 +17,8 @@ services:
       - DATABASE_URL=postgresql://postgres:password@db:5432/paypilot
       - PAYPAL_CLIENT_ID=${PAYPAL_CLIENT_ID}
       - PAYPAL_SECRET=${PAYPAL_SECRET}
+    env_file:
+      - ./.env
     depends_on:
       - db
 
